@@ -26,12 +26,14 @@ Jetpack is an exciting 2D action game where players navigate through challenging
 ### Installation
 
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/[username]/Jetpack.git
    cd Jetpack
    ```
 
 2. Install development tools:
+
    ```bash
    # Install pipx for managing Python CLI tools
    brew install pipx

@@ -10,27 +10,28 @@
 * TASK-000F: Configure Windsurf to use `gdformat` (from `gdtoolkit`) for GDScript formatting (e.g., format on save). [STATUS: TODO] [DEPENDS_ON: TASK-000C, TASK-000E] [Notes: Check Godot Tools extension settings in Windsurf for GDScript formatting options; ensure it can find the `gdformat` installed by pipx.]
 * TASK-000G: (Optional) Explore integrating `gdlint` (from `gdtoolkit`) into Windsurf or plan for command-line usage. [STATUS: TODO] [DEPENDS_ON: TASK-000C, TASK-000E]
 * TASK-000H: (Recommended) Setup Git pre-commit hooks for `gdformat` and `gdlint`. [STATUS: TODO] [DEPENDS_ON: TASK-001, TASK-000C] [Notes: Use the 'pre-commit' framework. Create a `.pre-commit-config.yaml` to include gdformat --check and gdlint.]
-* TASK-001: Initialize Git repository for the project. [STATUS: TODO]
-* TASK-002: Create Godot 4.x project structure (folders for scenes, scripts, art, resources). [STATUS: TODO] [DEPENDS_ON: TASK-001]
-* TASK-003: Configure basic Godot project settings (window size for portrait, application name). [STATUS: TODO] [DEPENDS_ON: TASK-002]
-* TASK-004: Select and configure "Mobile" renderer in Project Settings. [STATUS: TODO] [DEPENDS_ON: TASK-003]
-* TASK-005: Setup initial iOS export template in Godot (no need to fully build yet, just ensure template is present). [STATUS: TODO] [DEPENDS_ON: TASK-002]
-* TASK-006: Create main.gd as the project entry point script. [STATUS: TODO] [DEPENDS_ON: TASK-002]
-* TASK-007: Create MainMenu.tscn with a placeholder "Start Game" Button node. [STATUS: TODO] [DEPENDS_ON: TASK-002]
+* TASK-001: Initialize Git repository for the project. [STATUS: DONE]
+* TASK-002: Create Godot 4.x project structure (folders for scenes, scripts, art, resources). [STATUS: DONE] [DEPENDS_ON: TASK-001]
+* TASK-003: Configure basic Godot project settings (window size for portrait, application name). [STATUS: DONE] [DEPENDS_ON: TASK-002]
+* TASK-004: Select and configure "Mobile" renderer in Project Settings. [STATUS: DONE] [DEPENDS_ON: TASK-003]
+* TASK-005: Setup initial iOS export template in Godot (no need to fully build yet, just ensure template is present). [STATUS: DONE] [DEPENDS_ON: TASK-002]
+* TASK-006: Create main.gd as the project entry point script. [STATUS: DONE] [DEPENDS_ON: TASK-002]
+* TASK-007: Create MainMenu.tscn with a placeholder "Start Game" Button node. [STATUS: DONE] [DEPENDS_ON: TASK-002]
 * TASK-008: Implement main.gd to load MainMenu.tscn on project start. [STATUS: TODO] [DEPENDS_ON: TASK-006, TASK-007]
-* TASK-010: Create MainGameScene.tscn as the primary gameplay scene. [STATUS: TODO] [DEPENDS_ON: TASK-002]
-* TASK-009: Implement "Start Game" button in MainMenu.tscn to load/change scene to MainGameScene.tscn. [STATUS: TODO] [DEPENDS_ON: TASK-007, TASK-010]
-* TASK-011: Create placeholder Player.tscn (CharacterBody2D + CollisionShape2D + placeholder Sprite2D). [STATUS: TODO] [DEPENDS_ON: TASK-002]
-* TASK-012: Create basic Player.gd script attached to Player.tscn. [STATUS: TODO] [DEPENDS_ON: TASK-011]
+* TASK-010: Create MainGameScene.tscn as the primary gameplay scene. [STATUS: DONE] [DEPENDS_ON: TASK-002]
+* TASK-009: Implement "Start Game" button in MainMenu.tscn to load/change scene to MainGameScene.tscn. [STATUS: DONE] [DEPENDS_ON: TASK-007, TASK-010]
+* TASK-011: Create placeholder Player.tscn (CharacterBody2D + CollisionShape2D + placeholder Sprite2D). [STATUS: DONE] [DEPENDS_ON: TASK-002]
+* TASK-012: Create basic Player.gd script attached to Player.tscn. [STATUS: DONE] [DEPENDS_ON: TASK-011]
 
 ## Phase 1: Core Player Movement and Environment (Week 1 Focus)
 
 ### Continuous Movement and Ground
 
 * TASK-101: Implement constant horizontal forward velocity for Player in Player.gd. [STATUS: TODO] [DEPENDS_ON: TASK-012]
-* TASK-102: Add placeholder Ground.tscn (StaticBody2D + CollisionShape2D + placeholder Sprite2D). [STATUS: TODO] [DEPENDS_ON: TASK-002]
+* TASK-102: Add placeholder Ground.tscn (StaticBody2D + CollisionShape2D + placeholder Sprite2D). [STATUS: DONE] [DEPENDS_ON: TASK-002]
+* TASK-014: Add a placeholder ground (e.g., a static platform) to MainGameScene.tscn so the player has something to stand on. [STATUS: DONE] [DEPENDS_ON: TASK-010, TASK-102]
 * TASK-103: Instance Ground.tscn in MainGameScene.tscn for player to run on. [STATUS: TODO] [DEPENDS_ON: TASK-010, TASK-102]
-* TASK-104: Implement basic gravity effect on Player in Player.gd. [STATUS: TODO] [DEPENDS_ON: TASK-012]
+* TASK-104: Implement basic gravity effect on Player in Player.gd. [STATUS: DONE] [DEPENDS_ON: TASK-012]
 * TASK-105: Ensure Player collides and stays on top of Ground.tscn. [STATUS: TODO] [DEPENDS_ON: TASK-101, TASK-103, TASK-104]
 
 ### Jetpack Jump and Energy (Core Feel)

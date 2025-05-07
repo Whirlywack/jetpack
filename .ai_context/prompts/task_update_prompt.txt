@@ -1,0 +1,32 @@
+# Formulate Task Status Update for Jetpack Havoc
+
+The following task(s) from `../../specs/04_MVP_Task_List.md` has/have been addressed or worked on:
+
+* **Task ID(s):** `[INSERT TASK ID(s) HERE]`
+* **Summary of Work Accomplished During This Session:**
+    `[YOU OR THE AI SHOULD BRIEFLY DESCRIBE WHAT WAS DONE, e.g., "Implemented initial energy deduction logic for jetpack." or "Fixed bug related to enemy collision."]`
+
+Based on the work accomplished, please help formulate the updated line(s) for the `../../specs/04_MVP_Task_List.md`.
+
+The target format for each task in the task list is:
+`* TASK-XXX: [Original Task Description] [STATUS: <STATUS_VALUE>] [COMPLETED_DATE: YYYY-MM-DD] [Notes: Optional short notes]`
+
+For each Task ID listed above, please determine:
+1.  The new **`STATUS`**:
+    * `TODO`: If work hasn't meaningfully started or needs a full restart.
+    * `IN PROGRESS`: If partially completed and more work is pending.
+    * `DONE`: If all requirements for this task are met.
+    * `BLOCKED`: If progress cannot continue without resolving an issue (please specify the blocker in notes).
+2.  If the new `STATUS` is `DONE`, the **`COMPLETED_DATE`**. (Today is {{YYYY-MM-DD}} - *replace with actual date or have AI use current date*).
+3.  Any concise **`Notes`** that should be added. Examples:
+    * "Initial implementation complete, unit testing pending."
+    * "Integrated with Player scene, basic functionality confirmed."
+    * "Blocked pending clarification on X from `../session_brief.md`."
+    * "Refactored X for clarity."
+
+**Output:**
+Please provide the full, updated line(s) for `../../specs/04_MVP_Task_List.md` for each of the Task ID(s) mentioned above.
+
+**Example Output:**
+`* TASK-108: Implement input handling (e.g., Input.is_action_just_pressed("ui_accept")) for a single jump/jetpack boost in Player.gd. [STATUS: DONE] [COMPLETED_DATE: 2025-05-07] [Notes: Input successfully triggers placeholder action.]`
+`* TASK-109: Implement upward velocity application for jetpack boost in Player.gd. [STATUS: IN PROGRESS] [Notes: Basic upward movement on input, needs physics refinement.]`

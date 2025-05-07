@@ -1,0 +1,47 @@
+**File: `.ai_context/prompts/code_review_checklist.md`**
+
+```markdown
+# Jetpack Havoc - Code Review Checklist
+
+Please review the provided Godot (GDScript) code. Refer to the current `../session_brief.md` for the specific task context, relevant files, and requirements.
+
+## 1. Functionality & Requirements Fulfillment
+- **Task Adherence:** Does the code accurately and completely implement the requirements of the specified task(s) from `../../specs/04_MVP_Task_List.md`?
+- **Specification Compliance:** Does the code align with the details in `../../specs/03_MVP_Core_Gameplay_Mechanics.md` and other relevant specification documents?
+- **Correctness:** Are there any logical errors, bugs, or misinterpretations of the requirements?
+- **Edge Cases:** Have potential edge cases or boundary conditions been considered and handled appropriately?
+
+## 2. Code Quality & Readability
+- **Clarity:** Is the code clear, concise, and easy for another developer to understand?
+- **Formatting:** Is the code well-formatted (consistent indentation, spacing)?
+- **Naming Conventions:** Are variables, functions, classes, and signals named descriptively and consistently (e.g., snake_case for functions/variables, PascalCase for classes in GDScript)?
+- **Comments:** Are comments used effectively?
+    - Do they explain *why* something is done if the logic is complex, rather than just *what* is done?
+    - Are there any unnecessary or outdated comments?
+- **Magic Numbers/Strings:** Are magic numbers or strings avoided by using constants or exported variables where appropriate?
+
+## 3. Design & Architecture (Ref: `../../specs/02_MVP_Technical_Design_and_Architecture.md`)
+- **SRP (Single Responsibility Principle):** Does each class and function have a single, well-defined responsibility?
+- **Coupling & Cohesion:** Is the code loosely coupled and highly cohesive? Are signals used appropriately for inter-node communication?
+- **Godot Best Practices:**
+    - Is it leveraging Godot's node system, scenes, and signals effectively?
+    - Is `_ready()`, `_process()`, `_physics_process()` used correctly?
+    - Is memory management handled where necessary (though GDScript is largely garbage-collected)?
+- **Scalability & Maintainability:** Is the code structured in a way that allows for future modifications and extensions without major refactoring?
+- **Redundancy:** Is there any duplicated code that could be refactored into reusable functions or components?
+
+## 4. Performance Considerations (If applicable to the task)
+- **Efficiency:** Are there any obvious performance bottlenecks (e.g., complex operations in `_process` or `_physics_process` that could be optimized)?
+- **Resource Usage:** Is it mindful of resource usage (e.g., loading/unloading scenes or resources)?
+
+## 5. Error Handling & Robustness
+- **Error States:** Does the code anticipate and handle potential error states gracefully?
+- **Input Validation:** If the code processes external input, is it validated?
+
+## Summary of Review
+Please provide:
+1.  **Overall Assessment:** A brief summary of the code quality.
+2.  **Critical Issues:** List any bugs or major design flaws that need immediate attention.
+3.  **Suggestions for Improvement:** Specific, actionable recommendations for how the code could be improved (e.g., refactoring, renaming, adding comments, optimizing).
+4.  **Questions:** Any unclear parts or questions you have about the code's intent or implementation.
+5.  **Positive Aspects:** Note what was done well.
