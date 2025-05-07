@@ -1,0 +1,69 @@
+# Code Generation Request for Jetpack Havoc
+
+## 1. Task Overview & Context
+* **Primary Task ID(s) from Task List:** `[INSERT TASK ID(s) FROM ../../specs/04_MVP_Task_List.md HERE]`
+* **Key Objective for this Code Generation:** `[BRIEFLY DESCRIBE THE SPECIFIC GOAL FOR THIS CODE, e.g., "Implement the player's energy deduction logic when jetpack is used"]`
+* **Reference `../session_brief.md` for:**
+    * Current overall session goals.
+    * Specific focus for this task.
+    * Relevant existing project files.
+    * Any recent decisions or blockers.
+
+## 2. Key Specification Documents to Reference:
+* `../../specs/01_MVP_Product_Requirements.md` (For overall functional requirements)
+* `../../specs/02_MVP_Technical_Design_and_Architecture.md` (For architectural guidelines, Godot node structures, script logic examples, and project folder structure)
+* `../../specs/03_MVP_Core_Gameplay_Mechanics.md` (For detailed gameplay logic, e.g., player movement, energy system, shooting mechanics)
+* Refer to specific sections as detailed in `../session_brief.md` or the task description in `../../specs/04_MVP_Task_List.md`.
+
+## 3. Instructions for AI:
+1.  Thoroughly review all provided context: the current `../session_brief.md`, the specified Task ID(s) in `../../specs/04_MVP_Task_List.md`, and the relevant sections in the specification documents listed above.
+2.  Identify all existing project files (e.g., `Player.gd`, `BaseWeapon.gd`) that will be affected or need modification for this task, based on the technical design.
+3.  Write the necessary GDScript code to implement the requirements.
+4.  Adhere strictly to the architectural principles (Scene Composition, SRP, Loose Coupling, etc.) and specific technical approaches (state machines, signal usage, node structures) outlined in `../../specs/02_MVP_Technical_Design_and_Architecture.md`.
+5.  If creating new functions, classes, or signals, ensure they are well-commented, explaining their purpose, parameters, return values (if any), and any signals they might emit or connect to.
+6.  Ensure variable and function names are descriptive and follow any discernible project conventions.
+
+## 4. Required Output Format:
+* **For new GDScript files:** Provide the complete file path (e.g., `actors/player/new_script.gd`) and all its code.
+* **For modifications to existing GDScript files:**
+    * Clearly indicate the file path (e.g., `actors/player/Player.gd`).
+    * Provide the complete functions or methods that were changed or added.
+    * Use markers like `# BEGIN MODIFICATION - TASK [TASK_ID_HERE]` and `# END MODIFICATION - TASK [TASK_ID_HERE]` around the changed/added blocks.
+    * Alternatively, if a function is entirely new or wholesale replaced, clearly state this.
+* **Briefly explain the core logic** of any new functions or particularly complex code sections.
+* **List any new variables, constants, or signals** introduced and their purpose.
+* **State any assumptions** you had to make to complete the task.
+* **Point out any parts of the generated code that might require specific testing, or any potential edge cases** you foresee that might need further attention.
+
+## 5. Example of Output Snippet (Illustrative):
+
+**File:** `actors/player/Player.gd`
+
+```gdscript
+# ... existing class variables ...
+
+# BEGIN MODIFICATION - TASK [TASK_ID_HERE]
+# Signal emitted when player energy changes.
+signal energy_changed(current_energy: float, max_energy: float)
+
+var current_energy: float = 100.0
+var max_energy: float = 100.0
+var jetpack_energy_cost_per_boost: float = 20.0
+# END MODIFICATION - TASK [TASK_ID_HERE]
+
+# ... existing _ready() or _physics_process() ...
+
+# BEGIN MODIFICATION - TASK [TASK_ID_HERE]
+# Called when the jetpack boost input is activated.
+# Deducts energy and applies upward force if energy is available.
+func _on_jetpack_boost_input() -> void:
+    if current_energy >= jetpack_energy_cost_per_boost:
+        current_energy -= jetpack_energy_cost_per_boost
+        energy_changed.emit(current_energy, max_energy)
+        # TODO: Apply actual jetpack force here based on TASK-109
+        print("Jetpack used, energy remaining: %f" % current_energy) # Placeholder
+    else:
+        print("Not enough energy for jetpack boost.") # Placeholder
+# END MODIFICATION - TASK [TASK_ID_HERE]
+
+# ... rest of the script ...
