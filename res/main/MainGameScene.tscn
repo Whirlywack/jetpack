@@ -1,10 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://cg1pyp2wsxqv6"]
+[gd_scene load_steps=6 format=3 uid="uid://cg1pyp2wsxqv6"]
 
 [ext_resource type="PackedScene" uid="uid://5yndsdja778q" path="res://res/actors/player/Player.tscn" id="1"]
+[ext_resource type="Script" uid="uid://dnii7jkqg486m" path="res://res/main/MainGameScene.gd" id="1_jlbv3"]
 [ext_resource type="PackedScene" uid="uid://cwupcbfpbfnuy" path="res://res/systems/InfiniteGround.tscn" id="2"]
 [ext_resource type="PackedScene" uid="uid://cpdxp1a7jw38i" path="res://res/systems/ParallaxBackground.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://e63gitgymibd" path="res://res/ui/HUD.tscn" id="5_h86eg"]
 
 [node name="MainGameScene" type="Node2D"]
+script = ExtResource("1_jlbv3")
 
 [node name="ParallaxBackground" parent="." instance=ExtResource("3")]
 
@@ -14,3 +17,5 @@ position = Vector2(360, 1200)
 [node name="InfiniteGround" parent="." instance=ExtResource("2")]
 position = Vector2(0, 1260)
 camera_path = NodePath("../Player/Camera2d")
+
+[node name="HUD" parent="." instance=ExtResource("5_h86eg")]
