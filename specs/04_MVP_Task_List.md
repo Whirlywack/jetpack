@@ -30,9 +30,9 @@
 * TASK-101: Implement constant horizontal forward velocity for Player in Player.gd. [STATUS: TODO] [DEPENDS_ON: TASK-012]
 * TASK-102: Add placeholder Ground.tscn (StaticBody2D + CollisionShape2D + placeholder Sprite2D). [STATUS: DONE] [DEPENDS_ON: TASK-002]
 * TASK-014: Add a placeholder ground (e.g., a static platform) to MainGameScene.tscn so the player has something to stand on. [STATUS: DONE] [DEPENDS_ON: TASK-010, TASK-102]
-* TASK-103: Instance Ground.tscn in MainGameScene.tscn for player to run on. [STATUS: TODO] [DEPENDS_ON: TASK-010, TASK-102]
+* TASK-103: Instance Ground.tscn in MainGameScene.tscn for player to run on. [STATUS: DONE] [DEPENDS_ON: TASK-010, TASK-102] [Notes: Enhanced with infinite ground system]
 * TASK-104: Implement basic gravity effect on Player in Player.gd. [STATUS: DONE] [DEPENDS_ON: TASK-012]
-* TASK-105: Ensure Player collides and stays on top of Ground.tscn. [STATUS: TODO] [DEPENDS_ON: TASK-101, TASK-103, TASK-104]
+* TASK-105: Ensure Player collides and stays on top of Ground.tscn. [STATUS: DONE] [DEPENDS_ON: TASK-101, TASK-103, TASK-104]
 
 ### Jetpack Jump and Energy (Core Feel)
 
@@ -55,9 +55,9 @@
 
 ### Basic Camera and Scrolling
 
-* TASK-119: Add Camera2D node as a child of Player.tscn. [STATUS: TODO] [DEPENDS_ON: TASK-011]
-* TASK-120: Configure Camera2D to keep player roughly 30-40% from left edge in portrait view. [STATUS: TODO] [DEPENDS_ON: TASK-119]
-* TASK-121: Implement basic infinite scrolling background (e.g., two repeating placeholder Sprite2Ds moving left). [STATUS: TODO] [DEPENDS_ON: TASK-010, TASK-119]
+* TASK-119: Add Camera2D node as a child of Player.tscn. [STATUS: DONE] [DEPENDS_ON: TASK-011]
+* TASK-120: Configure Camera2D to keep player roughly 30-40% from left edge in portrait view. [STATUS: DONE] [DEPENDS_ON: TASK-119]
+* TASK-121: Implement basic infinite scrolling background (e.g., two repeating placeholder Sprite2Ds moving left). [STATUS: DONE] [DEPENDS_ON: TASK-010, TASK-119]
 
 ## Phase 2: Shooting and Basic Combat (Week 2 Focus)
 

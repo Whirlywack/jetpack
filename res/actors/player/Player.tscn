@@ -12,3 +12,9 @@ script = ExtResource("1_abcde")
 shape = SubResource("RectangleShape2D_12345")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="Camera2d" type="Camera2D" parent="."]
+offset = Vector2(216, -384)
+position_smoothing_enabled = true
+position_smoothing_speed = 3.0
+editor_draw_limits = true

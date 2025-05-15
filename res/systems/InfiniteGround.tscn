@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://cwupcbfpbfnuy"]
+
+[ext_resource type="Script" uid="uid://bqsb7888m6frm" path="res://res/systems/InfiniteGround.gd" id="2_3ya6s"]
+[ext_resource type="TileSet" uid="uid://02pln8c7vpq4" path="res://res/systems/GroundTileSet.tres" id="2_tileset"]
+
+[node name="InfiniteGround" type="TileMap"]
+tile_set = ExtResource("2_tileset")
+format = 2
+script = ExtResource("2_3ya6s")
